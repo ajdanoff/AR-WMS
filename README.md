@@ -1,68 +1,37 @@
-# AR-Warehouse Management System (AR-WMS) for Small Computer Store
+# AR-Warehouse Management System (AR-WMS)
 
-## Project Concept
-The AR-Warehouse Management System (AR-WMS) for your small computer store aims to augment traditional warehouse operations by overlaying augmented reality data visualization on real-world objects and shelves. This system enhances inventory management, item lookup, and stock monitoring using AR to:
+## Project Overview  
+The AR-Warehouse Management System (AR-WMS) enhances inventory management in small computer stores and home environments by overlaying augmented reality information on real-world storage locations. It enables quick product identification, visual stock verification, and streamlined picking/restocking through user-friendly AR interaction.
 
-- Quickly identify product locations  
-- Verify stock quantities visually  
-- Speed up picking and restocking processes  
-- Minimize errors and improve operational efficiency
+## Features  
+- Real-time inventory visualization with AR overlays  
+- Object detection powered by computer vision and ML  
+- Adaptable for warehouse and in-home use  
+- Mobile and wearable device compatibility  
+- Backend API for inventory management and updates  
 
-Core interaction would be through mobile or wearable AR devices (e.g., smartphones, tablets, or AR glasses) that use camera input to recognize products and shelves and overlay information such as product details, inventory status, restock alerts, and real-time updates.
+## Technology Stack  
+- Python, FastAPI, PostgreSQL/SQLite  
+- OpenCV, TensorFlow/PyTorch  
+- Unity or native ARCore/ARKit apps  
+- Smartphones, tablets, AR glasses  
 
----
+## Project Plan  
+| Phase                  | Duration | Deliverables                        |  
+|------------------------|----------|-----------------------------------|  
+| Requirements & Research | 2 weeks  | Detailed specification document   |  
+| Design                 | 2 weeks  | System design and architecture    |  
+| Prototype Development  | 4 weeks  | AR overlay prototype              |  
+| Backend & API Setup    | 3 weeks  | Inventory database and REST API   |  
+| Frontend AR App        | 4 weeks  | AR user interface and integration |  
+| Testing & Refinement   | 3 weeks  | Full system testing and tuning    |  
+| Deployment & Training  | 2 weeks  | Deployment and user training      |  
 
-## Technology Stack
+## Documentation  
+See the [Detailed Requirements Specification](docs/requirements_specification_document.md) for more information.
 
-- **Programming Language:** Python (for backend, computer vision, and integration)  
-- **Computer Vision & AR:** OpenCV (image processing, object detection), optionally ARCore/ARKit for advanced AR rendering on mobile  
-- **Machine Learning:** TensorFlow/PyTorch for training object detection models to recognize products  
-- **Database:** SQLite or PostgreSQL for inventory database  
-- **Backend Framework:** FastAPI or Flask (REST API to connect AR front end with backend database)  
-- **Frontend (AR Interface):** Unity with Python integration (via external REST calls) or native mobile app (Android/iOS) with ARCore/ARKit  
-- **Hardware:** Smartphones or AR glasses with camera capabilities  
-- **Additional Tools:** GitHub for version control, Docker for containerization, CI/CD pipelines for deployment  
+## Contributing  
+We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
----
-
-## Draft Proposal Outline
-
-### Project Title  
-AR-Warehouse Management System for Small Computer Store
-
-### Background & Problem Statement  
-Traditional inventory management relies heavily on manual checks, which are prone to errors and time-consuming. AR technology offers an interactive and efficient solution for real-time inventory visualization and management.
-
-### Objectives  
-- Develop an AR-based system to identify and locate inventory items in the warehouse.  
-- Integrate object detection using OpenCV and ML to recognize computer store products.  
-- Provide real-time inventory updates and alerts via the AR interface.
-
-### Methodology  
-- Use OpenCV for camera capture and image processing; train models for product recognition.  
-- Develop backend API with FastAPI and database to maintain inventory data.  
-- Build AR frontend application for real-time overlay and interaction.
-
-### Expected Outcomes  
-- Reduced search and picking time.  
-- Improved accuracy in stock counts and reordering.  
-- Enhanced warehouse staff productivity.
-
----
-
-## Project Plan (High-Level)
-
-| Phase               | Duration | Key Activities                            | Deliverables              |
-|---------------------|----------|-----------------------------------------|---------------------------|
-| Requirements & Research | 2 weeks  | Gather store requirements, research AR tech | Detailed requirement doc  |
-| Design              | 2 weeks  | System architecture, technology selection  | Design docs, data models  |
-| Prototype Development| 4 weeks  | Develop detection model, basic AR overlay  | Prototype MVP             |
-| Backend & API Setup | 3 weeks  | Develop inventory database, REST API     | Functional backend system |
-| Frontend AR App     | 4 weeks  | AR interface development, integration    | Working AR app            |
-| Testing & Refinement | 3 weeks  | System testing, bug fixing, usability     | Tested and refined system |
-| Deployment & Training | 2 weeks  | Deploy system, staff training              | Deployed system, training materials |
-
----
-
-Feel free to ask for help converting this markup into your project repository README.md or to expand it with installation instructions, contributing guidelines, or additional technical details.
-
+## License  
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
