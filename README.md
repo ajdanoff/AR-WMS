@@ -30,6 +30,9 @@ The AR-Warehouse Management System (AR-WMS) enhances inventory management in sma
 ## Documentation  
 See the [Detailed Requirements Specification](docs/requirements_specification_document.md) for more information.
 
+## Architecture  
+See the [System Architecture Draft](docs/system_architecture_document.md) for more information.
+
 ## Contributing  
 We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
