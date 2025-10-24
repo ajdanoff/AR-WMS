@@ -1,0 +1,27 @@
+graph TD
+  subgraph AR_Frontend_Application
+    A1["Camera Input (OpenCV)"]
+    A2["Object Detection & Recognition (TensorFlow/PyTorch)"]
+    A3["AR Overlay Visualization (Unity / ARCore / ARKit)"]
+  end
+
+  subgraph Backend_Inventory_Service
+    B1["Inventory Database (PostgreSQL / SQLite)"]
+    B2["REST API Server (Python FastAPI / Flask)"]
+  end
+
+  subgraph Hardware_Devices
+    H1["Smartphones / Tablets / AR Glasses"]
+  end
+
+  H1 --> A1
+  A1 --> A2
+  A2 --> A3
+  A3 -->|API Request| B2
+  B2 --> B1
+  B2 -->|API Response| A3
+
+  style AR_Frontend_Application fill:#f9f,stroke:#333,stroke-width:2px
+  style Backend_Inventory_Service fill:#bbf,stroke:#333,stroke-width:2px
+  style Hardware_Devices fill:#bfb,stroke:#333,stroke-width:2px
+

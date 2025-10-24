@@ -1,0 +1,16 @@
+sequenceDiagram
+  participant User as Warehouse/Home User
+  participant ARApp as AR Frontend App
+  participant Backend as Backend Inventory Service
+
+  User->>ARApp: Point device at item/shelf
+  ARApp->>ARApp: Capture & process camera input
+  ARApp->>Backend: Request inventory info (REST API)
+  Backend->>Backend: Query database
+  Backend->>ARApp: Return item details
+  ARApp->>User: Display AR overlay with info
+  User->>ARApp: Submit stock update/request
+  ARApp->>Backend: Send update
+  Backend->>Backend: Update database and confirm
+  Backend->>ARApp: Acknowledge update
+

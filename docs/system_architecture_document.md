@@ -71,49 +71,8 @@ The AR-WMS system integrates backend inventory management, an AR-based frontend 
 ### 6. Architectural Diagrams (Mermaid Syntax)
 
 #### 6.1 Component Diagram
-
-graph TD
-subgraph AR Frontend Application
-A1[Camera Input\n(OpenCV)]
-A2[Object Detection & Recognition\n(TensorFlow/PyTorch)]
-A3[AR Overlay Visualization\n(Unity/ARCore/ARKit)]
-end
-
-subgraph Backend Inventory Service
-B1[Inventory Database\n(PostgreSQL/SQLite)]
-B2[REST API Server\n(Python FastAPI/Flask)]
-end
-
-subgraph Hardware Devices
-H1[Smartphones/Tablets/AR Glasses]
-end
-
-H1 --> A1
-A1 --> A2
-A2 --> A3
-A3 -->|API Request| B2
-B2 --> B1
-B2 -->|API Response| A3
-
-style AR Frontend Application fill:#f9f,stroke:#333,stroke-width:2px
-style Backend Inventory Service fill:#bbf,stroke:#333,stroke-width:2px
-style Hardware Devices fill:#bfb,stroke:#333,stroke-width:2px
-
+![Component Diagram](img/component_diagram.png)
 
 #### 6.2 Sequence Diagram
 
-sequenceDiagram
-participant User as Warehouse/Home User
-participant ARApp as AR Frontend App
-participant Backend as Backend Inventory Service
-
-User->>ARApp: Point device at item/shelf
-ARApp->>ARApp: Capture & process camera input
-ARApp->>Backend: Request inventory info (REST API)
-Backend->>Backend: Query database
-Backend->>ARApp: Return item details
-ARApp->>User: Display AR overlay with info
-User->>ARApp: Submit stock update/request
-ARApp->>Backend: Send update
-Backend->>Backend: Update database and confirm
-Backend->>ARApp: Acknowledge update
+![Sequence Diagram](img/sequence_diagram.png)
